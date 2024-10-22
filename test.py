@@ -101,3 +101,32 @@
 # print(somme)3
 
 # *****************************************************************************
+# //! calculate en  fonction de la matrice donnée en une seule ligne de input 
+
+# nombre = (eval(input("Entrer vos calcule : ")))
+
+# print(f"résultat : {nombre}")
+
+# *****************************************************************************
+
+# matrice1 = [
+#     [1, 2],
+#     [3, 4]
+# ]
+
+# matrice2 = [
+#     [5, 6],
+#     [7, 8]
+# ]
+
+# matrice_total = []  # Déclaration de la liste vide avant la boucle
+# for i in range(len(matrice1)):
+#     ligne = []  # Nouvelle ligne pour chaque itération
+#     for j in range(len(matrice1[i])):
+#         ligne.append(matrice1[i][j])
+#         ligne.append(matrice2[i][j])
+#     matrice_total.append(ligne)
+
+# print(matrice_total)
+
+
