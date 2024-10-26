@@ -32,3 +32,13 @@ def afficher_contacts():
             print("Email:", contact[2])
             print("-----")
 
+def  rechercher_contact():
+    nom = input("Entrez le nom du contact à rechercher : ")
+    for  contact in all_contacts:
+        if contact[0] == nom:
+            print("Nom:", contact[0])
+            print("Numéro de téléphone:", contact[1])
+            print("Email:", contact[2])
+            print("-----")
+        else :  print("Contact non trouvé, reesayer")
+
