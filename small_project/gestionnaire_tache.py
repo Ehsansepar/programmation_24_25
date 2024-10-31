@@ -12,12 +12,16 @@ def afficher_taches() :
         print(" --- Aucune tâche enregistrée --- ")
 
     else :
-        for tache in taches : 
-            nom = tache[0]
-            description = tache[1]
-            statut = tache[2]
+        # for tache in taches : 
+        #     nom = tache[0]
+        #     description = tache[1]
+        #     statut = tache[2]
+        for i, tache in enumerate(taches, 1):
+            nom, description, statut = tache
         print("     --- Affichage des tâches ---    ")
-        print(f"Nom : {nom}\nDescription : {description}\nStatut : {statut}")
+        print(f"{i} - Nom : {nom}\n    Description : {description}\n    Statut : {statut}")
+
+
 
 ajoute_tache()
 afficher_taches()
