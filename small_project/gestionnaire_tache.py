@@ -96,3 +96,5 @@ def menu_principal():
 
 # Lancer le programme
 menu_principal()
+
+# nothing to do for today i was busy cause i am in weekend 
