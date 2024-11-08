@@ -35,6 +35,16 @@ def afficher_taches():
             print(f"{i} - Nom : {nom}\n    Description : {description}\n    Statut : {statut}\n -----------------------\n\n")
     input("Appuyez sur Entrée pour revenir au menu...")
 
+def afficher_taches_main():
+    if not taches:
+        print(" --- Aucune tâche enregistrée --- ")
+    else:
+        print("     --- Affichage des tâches ---    ")
+        for i, tache in enumerate(taches, 1):
+            nom, description, statut = tache
+            print(f"{i} - Nom : {nom}\n    Description : {description}\n    Statut : {statut}\n -----------------------\n\n")
+
+
 def supprimer_tache():
     clear_screen()
     if not taches:
@@ -64,7 +74,7 @@ def marquer_tache_terminee():
         input("Appuyez sur Entrée pour revenir au menu...")
         return
     
-    afficher_taches()
+    afficher_taches_main()
 
     while True:
         try:
