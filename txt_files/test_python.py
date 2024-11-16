@@ -58,16 +58,22 @@ def afficher_taches():
     """Affiche les tâches directement depuis le fichier."""
     clear_screen()
     try:
-        with open('./txt_files/test.txt', 'r') as fichier:
-            lignes = fichier.readlines()
-            if not lignes:
-                print(" --- Aucune tâche enregistrée --- ")
-            else:
-                print("     --- Affichage des tâches ---    ")
-                for ligne in lignes:
-                    print(ligne.strip())
+        fichier = open('./txt_files/test.txt', 'r')  # Open the file
+        lignes = fichier.readlines()  # Read all lines
+        if not lignes:
+            print(" --- Aucune tâche enregistrée --- ")
+        else:
+            print("     --- Affichage des tâches ---    ")
+            for ligne in lignes:  # Iterate through each line
+                try:
+                    nom, description, statut = ligne.strip().split('|')
+                    print(f"Nom : {nom}\nDescription : {description}\nStatut : {statut}\n")
+                except ValueError:
+                    print(f" --- Ligne mal formatée : {ligne.strip()} --- ")
     except FileNotFoundError:
         print(" --- Aucune tâche enregistrée --- ")
+    finally:
+        fichier.close()  # Ensure the file is closed no matter what
     input("Appuyez sur Entrée pour revenir au menu...")
 
 
