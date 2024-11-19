@@ -15,44 +15,14 @@ def ajouter_tache():
     nom = input("Entrez le nom de la tâche : ")
     description = input("Entrez la description de la tâche : ")
     statut = "en attente"
-    taches.append([nom, description, statut])
+    # taches.append([nom, description, statut])
 
     # Sauvegarde dans un fichier
-    with open('./txt_files/test.txt', 'a') as fichier:
-        fichier.write(f"{nom}|{description}|{statut}\n")
+    fichier = open('./txt_files/test.txt', 'a')
+    fichier.write(f"{nom}|{description}|{statut}\n")
 
     print("\n ---*--- Votre tâche a été enregistrée avec succès ---*---\n\n")
     input("Appuyez sur Entrée pour revenir au menu...")
-
-
-def charger_taches():
-    """Charge les tâches depuis un fichier texte."""
-    try:
-        with open('./txt_files/test.txt', 'r') as fichier:
-            for ligne in fichier:
-                nom, description, statut = ligne.strip().split('|')
-                taches.append([nom, description, statut])
-    except FileNotFoundError:
-        # Si le fichier n'existe pas, aucune action n'est nécessaire
-        pass
-
-# def afficher_taches():
-#     """Affiche les tâches directement à partir d'un fichier texte."""
-#     clear_screen()
-#     try:
-#         fichier = open('./txt_files/test.txt', 'r')
-#         # with open('./txt_files/test.txt', 'r') as fichier:
-#         lignes = fichier.readlines()
-#         if not lignes:
-#             print(" --- Aucune tâche enregistrée --- ")
-#         else:
-#             print("     --- Affichage des tâches ---    ")
-#             for i, ligne in enumerate(lignes, 1):
-#                 nom, description, statut = ligne.strip().split('|')
-#                 print(f"{i} - Nom : {nom}\n    Description : {description}\n    Statut : {statut}\n -----------------------\n")
-#     except FileNotFoundError:
-#         print(" --- Aucune tâche enregistrée --- ")
-#     input("Appuyez sur Entrée pour revenir au menu...")
 
 def afficher_taches():
     """Affiche les tâches directement depuis le fichier."""
@@ -85,5 +55,4 @@ while True :
         ajouter_tache()
     elif choix == 2 :
         afficher_taches()
-    elif  choix == 3 :
-        charger_taches()
+
