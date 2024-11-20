@@ -146,3 +146,27 @@
 # for i in range(len(fruits)) : 
 #     if len(fruits[i]) <= 5 :
 #         print(fruits[i])
+
+# -------------------------------------------------------------------------------------------------------------------------------------------
+
+# # 4) Soit 1 liste de nombres
+# nb=[25,89,65,99,13,78,12,33,68,17]
+# #     0  1  2  3  4  5  6  7  8  9
+# # Affichez la position !!! des nombres pairs. Ici ce sera 5 6 8
+# # Sauvez sous liste4.py
+
+# for i in range(len(nb)) : 
+#     if nb[i] % 2 == 0 : 
+#         print(i, nb[i])
+
+# 5) Soit 1 liste de nombres
+# Affichez le minimum (cf. Maximum)
+# On initialise mini=nb[0] et pas mini=0
+# Sauvez sous liste6.py
+nb=[25,89,65,99,13,78,12,33,68,17]
+mini = nb[0]
+
+for i in range(1, len(nb)) : 
+    if nb[i] < mini : 
+        mni = nb[i]
+print(mini)
