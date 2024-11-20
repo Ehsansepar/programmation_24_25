@@ -127,12 +127,22 @@
 # 2) Tirez 200 nombres au hasard compris entre 1 et 100, et ajoutez les dans la liste lst50 s'ils sont
 # supérieurs à 50. Partez d'une liste vide et affichez à la fin la liste complète.
 
-from random import randrange
+# from random import randrange
 
-lst50 = []
+# lst50 = []
 
-for i in range(200) : 
-    hasard = randrange(1, 101)
-    if hasard > 50 :
-        lst50.append(hasard)
-print(lst50)
+# for i in range(200) : 
+#     hasard = randrange(1, 101)
+#     if hasard > 50 :
+#         lst50.append(hasard)
+# print(lst50)
+
+
+# -------------------------------------------------------------------------------------------------------------------------------------------
+# 3) Soit 1 liste
+# affichez les mots inférieurs ou égal à 5 lettres, combien y en a t-il ?
+# fruits=['pomme','poire','ananas','kiwi','banane','mangue','peche','prune']
+
+# for i in range(len(fruits)) : 
+#     if len(fruits[i]) <= 5 :
+#         print(fruits[i])
