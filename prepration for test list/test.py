@@ -104,3 +104,35 @@
 
 # print(vecteur)
 
+# -------------------------------------------------------------------------------------------------------------------------------------
+# facturegsm = [25, 55, 20, 63, 120, 45, 67, 81, 96, 26, 56, 36]
+# mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+
+# mois_sup_50 = 0
+
+# for i in range(len(facturegsm)) : 
+#     if facturegsm[i] > 50 :
+#         mois_sup_50 += 1
+
+# for i in range(len(facturegsm)) :
+#     if facturegsm[i] > 50 :
+#         print(mois[i])
+
+# moyenne = sum(facturegsm) / len(facturegsm)
+
+# print(moyenne)
+
+# -------------------------------------------------------------------------------------------------------------------------------------------
+
+# 2) Tirez 200 nombres au hasard compris entre 1 et 100, et ajoutez les dans la liste lst50 s'ils sont
+# supérieurs à 50. Partez d'une liste vide et affichez à la fin la liste complète.
+
+from random import randrange
+
+lst50 = []
+
+for i in range(200) : 
+    hasard = randrange(1, 101)
+    if hasard > 50 :
+        lst50.append(hasard)
+print(lst50)
