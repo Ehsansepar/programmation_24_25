@@ -7,3 +7,14 @@ def add() :
         fichier.write(name + "|" + password + "|" + website + "\n")
     
     print("Votre mot de passe a bien été enregistrer \n")
+
+def view() : 
+    print(" ----- Vos Comptes et mots de passe  -----")
+    
+    with open('password.txt', 'r') as fichier :
+        lignes = fichier.readlines()
+        for i, ligne in lignes :
+            data = ligne.rstrip()
+            name, password, website = data.split("|")
+            print(f"ID : {i}\nName Account : {name}\nPassword : {password}\nWebsite : {website}\n\n")
+            
