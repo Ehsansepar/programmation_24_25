@@ -17,4 +17,22 @@ def view() :
             data = ligne.rstrip()
             name, password, website = data.split("|")
             print(f"ID : {i}\nName Account : {name}\nPassword : {password}\nWebsite : {website}\n\n")
-            
+
+while True :
+    try : 
+        choix = int(input(
+            """ ----- Chose Option below -----
+       1 - Add 
+       2 - View
+       3 - Quitter
+       
+       -> """))
+        
+        if choix == 1 :
+            add()
+        elif choix == 2 : 
+            view()
+        elif choix == 3 :
+            break
+    except ValueError :
+        print("Essaye de choisir avec des nombre svp! \n\n")
