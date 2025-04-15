@@ -24,6 +24,20 @@ menu = """
 
 # Fonctions
 
+def affichier_menu():
+    print(menu)
+
+def afficher_notes(notes):
+    if not notes:
+        print("Aucune note à afficher.")
+    else:
+        for index, note in enumerate(notes, start=1):
+            print(f"{index}. {note}")
+def ajouter_note(notes):
+    note = input("Entrez la note à ajouter : ")
+    notes.append(note)
+    print("Note ajoutée.")
+
 
 
 affichier_menu()
