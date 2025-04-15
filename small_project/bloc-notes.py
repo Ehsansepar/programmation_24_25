@@ -63,6 +63,25 @@ def modifier_note(notes):
     except ValueError:
         print("Veuillez entrer un numéro valide.")
 
+
+def supprimer_note(notes):
+    afficher_notes(notes)
+    try:
+        index = int(input("Entrez le numéro de la note à supprimer : ")) - 1
+        if 0 <= index < len(notes):
+            notes.pop(index)
+            print("Note supprimée.")
+        else:
+            print("Numéro de note invalide.")
+    except ValueError:
+        print("Veuillez entrer un numéro valide.")
+
+def sauvegarder_notes(notes, nom_fichier):
+    with open(nom_fichier, 'w') as fichier:
+        for note in notes:
+            fichier.write(note + '\n')
+    print("Notes sauvegardées dans le fichier.")
+
 affichier_menu()
 while True:
     option = choisir_option()
