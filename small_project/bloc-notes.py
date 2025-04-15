@@ -38,7 +38,30 @@ def ajouter_note(notes):
     notes.append(note)
     print("Note ajoutée.")
 
+def choisir_option():
+    try:
+        option = int(input("Choisissez une option : "))
+        if option in range(1, 6):
+            return option
+        else:
+            print("Option invalide. Veuillez choisir entre 1 et 5.")
+            return choisir_option()
+    except ValueError:
+        print("Veuillez entrer un numéro valide.")
+        return choisir_option()
 
+def modifier_note(notes):
+    afficher_notes(notes)
+    try:
+        index = int(input("Entrez le numéro de la note à modifier : ")) - 1
+        if 0 <= index < len(notes):
+            nouvelle_note = input("Entrez la nouvelle note : ")
+            notes[index] = nouvelle_note
+            print("Note modifiée.")
+        else:
+            print("Numéro de note invalide.")
+    except ValueError:
+        print("Veuillez entrer un numéro valide.")
 
 affichier_menu()
 while True:
