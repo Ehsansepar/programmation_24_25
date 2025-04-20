@@ -31,14 +31,17 @@ submit = CTkButton(app,
                   text="Submit",
                   font=("Arial", 20),
                   fg_color="blue",
+                  corner_radius=100,
+                  border_color="red",
                   hover_color="darkblue",
                   command=submit)
-submit.pack()
+submit.pack(padx=0, pady=(10,0))
 
 clear = CTkButton(app, 
                   text="Reset",
                   font=("Arial", 20),
                   fg_color="blue",
+                  corner_radius=100,
                   hover_color="darkblue",
                   command=reset)
 
