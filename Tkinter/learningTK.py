@@ -163,11 +163,18 @@ signup_button.pack(side="left", padx=10, pady=20)
 
 # input
 input_frame = CTkFrame(main_frame)
-input_frame.pack(pady=20, padx=20, fill="both")
+input_frame.pack(pady=10, padx=20, fill="both")
 
-username_input = CTkEntry()
+username_input = CTkEntry(input_frame,
+                          width=350,
+                          height=50)
+username_input.pack(pady=10)
 
-password_input
+password_input = CTkEntry(input_frame, 
+                          width=350,
+                          height=50)
+password_input.pack(pady=10)
+
 
 
 app.mainloop()
