@@ -73,57 +73,101 @@
 #! -------------------------------------------------------------------------------------
         # intput_box
 
+# from customtkinter import *
+
+# def lightmode():
+#     set_appearance_mode("dark")
+
+# def submit(): 
+#     username = entry.get()
+#     if username:  # Vérifie si l'entrée n'est pas vide
+#         clear.pack()  # Affiche le bouton Reset
+#         # backspace.pack()
+#     print("hello", username)
+
+# def reset():
+#     entry.delete(0, END)  # Correction: ajout des paramètres pour delete
+#     clear.pack_forget()   # Cache le bouton Reset
+
+# def backspace() :
+#     entry.delete(len(entry.get())-1, END)
+
+# set_appearance_mode("dark")
+# app = CTk()
+
+# entry = CTkEntry(app, 
+#                 font=("Arial", 50), 
+#                 bg_color="green", 
+#                 fg_color="black", 
+#                 width=350)
+# entry.pack()
+
+# submit = CTkButton(app, 
+#                   text="Submit",
+#                   font=("Arial", 20),
+#                   fg_color="blue",
+#                   hover_color="darkblue",
+#                   command=submit)
+# submit.pack()
+
+# clear = CTkButton(app, 
+#                   text="Reset",
+#                   font=("Arial", 20),
+#                   fg_color="blue",
+#                   hover_color="darkblue",
+#                   command=reset)
+
+# backspace = CTkButton(app, 
+#                   text="Backspace",
+#                   font=("Arial", 20),
+#                   fg_color="blue",
+#                   hover_color="darkblue",
+#                   command=backspace)
+# backspace.pack()
+
+
+# app.mainloop()
+
+#! -------------------------------------------------------------------------------------
+
+# frame in frame 
+
+
 from customtkinter import *
 
-def lightmode():
-    set_appearance_mode("dark")
 
-def submit(): 
-    username = entry.get()
-    if username:  # Vérifie si l'entrée n'est pas vide
-        clear.pack()  # Affiche le bouton Reset
-        # backspace.pack()
-    print("hello", username)
-
-def reset():
-    entry.delete(0, END)  # Correction: ajout des paramètres pour delete
-    clear.pack_forget()   # Cache le bouton Reset
-
-def backspace() :
-    entry.delete(len(entry.get())-1, END)
-
-set_appearance_mode("dark")
 app = CTk()
+app.geometry("630x500")
 
-entry = CTkEntry(app, 
-                font=("Arial", 50), 
-                bg_color="green", 
-                fg_color="black", 
-                width=350)
-entry.pack()
+# set_appearance_mode()
+# set_default_color_theme()
 
-submit = CTkButton(app, 
-                  text="Submit",
-                  font=("Arial", 20),
-                  fg_color="blue",
-                  hover_color="darkblue",
-                  command=submit)
-submit.pack()
+main_frame = CTkFrame(app)
+main_frame.pack(padx=20, pady=20, fill="both")
 
-clear = CTkButton(app, 
-                  text="Reset",
-                  font=("Arial", 20),
-                  fg_color="blue",
-                  hover_color="darkblue",
-                  command=reset)
+title_label = CTkLabel(main_frame, 
+                      text="Login / Sign up ",
+                      font=("Inter", 32, "bold"))
+title_label.pack(pady=20)
 
-backspace = CTkButton(app, 
-                  text="Backspace",
-                  font=("Arial", 20),
-                  fg_color="blue",
-                  hover_color="darkblue",
-                  command=backspace)
-backspace.pack()
+
+login_button = CTkButton(main_frame,
+                        font=("Arial",20, "bold"),
+                        text="Login")
+login_button.pack(side="left", padx=100, pady=20)
+
+signup_button = CTkButton(main_frame,
+                        font=("Arial",20, "bold"),
+                        text="Sign up")
+signup_button.pack(side="left", padx=10, pady=20)
+
+# input
+input_frame = CTkFrame(main_frame)
+input_frame.pack(pady=20, padx=20, fill="both")
+
+username_input = CTkEntry()
+
+password_input
 
 
 app.mainloop()
