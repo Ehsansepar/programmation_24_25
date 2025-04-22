@@ -1,11 +1,11 @@
 from customtkinter import *
 from pathlib import Path
 
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\ehsan\Desktop\project\build\assets\frame0")
+# OUTPUT_PATH = Path(__file__).parent
+# ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\ehsan\Desktop\project\build\assets\frame0")
 
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
+# def relative_to_assets(path: str) -> Path:
+#     return ASSETS_PATH / Path(path)
 
 def login(): 
     username = entry_1.get()
@@ -20,11 +20,9 @@ def login():
     else:
         error_label.pack(pady=10)
 
-# Configuration de l'apparence
 set_appearance_mode("dark")
 set_default_color_theme("blue")
 
-# Création de la fenêtre principale
 app = CTk()
 app.geometry("630x500")
 app.title("Login System")
