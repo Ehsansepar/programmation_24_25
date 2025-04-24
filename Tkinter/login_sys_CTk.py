@@ -90,4 +90,4 @@ success_label = CTkLabel(main_frame,
 
 app.mainloop()
 
-// nothing today .
+// nothing today ..
