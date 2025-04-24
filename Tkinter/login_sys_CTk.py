@@ -89,3 +89,5 @@ success_label = CTkLabel(main_frame,
                         font=("Inter", 16))
 
 app.mainloop()
+
+// nothing today
