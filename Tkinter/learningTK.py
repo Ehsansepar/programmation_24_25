@@ -180,3 +180,15 @@
 # app.mainloop()
 
 #! -------------------------------------------------------------------------------------
+
+# from customtkinter import * # No longer needed
+from ttkbootstrap import *
+import ttkbootstrap as ttk
+
+app = ttk.Window()
+app.geometry("430x400")
+
+button = ttk.Button(app, text="My Button", bootstyle="info") # Added text to the button
+button.pack()
+
+app.mainloop()
