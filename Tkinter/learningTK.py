@@ -133,48 +133,50 @@
 # frame in frame 
 
 
-from customtkinter import *
+# from customtkinter import *
 
 
-app = CTk()
-app.geometry("630x500")
+# app = CTk()
+# app.geometry("630x500")
 
-# set_appearance_mode()
-# set_default_color_theme()
+# # set_appearance_mode()
+# # set_default_color_theme()
 
-main_frame = CTkFrame(app)
-main_frame.pack(padx=20, pady=20, fill="both")
+# main_frame = CTkFrame(app)
+# main_frame.pack(padx=20, pady=20, fill="both")
 
-title_label = CTkLabel(main_frame, 
-                      text="Login / Sign up ",
-                      font=("Inter", 32, "bold"))
-title_label.pack(pady=20)
-
-
-login_button = CTkButton(main_frame,
-                        font=("Arial",20, "bold"),
-                        text="Login")
-login_button.pack(side="left", padx=100, pady=20)
-
-signup_button = CTkButton(main_frame,
-                        font=("Arial",20, "bold"),
-                        text="Sign up")
-signup_button.pack(side="left", padx=10, pady=20)
-
-# input
-input_frame = CTkFrame(main_frame)
-input_frame.pack(pady=10, padx=20, fill="both")
-
-username_input = CTkEntry(input_frame,
-                          width=350,
-                          height=50)
-username_input.pack(pady=10)
-
-password_input = CTkEntry(input_frame, 
-                          width=350,
-                          height=50)
-password_input.pack(pady=10)
+# title_label = CTkLabel(main_frame, 
+#                       text="Login / Sign up ",
+#                       font=("Inter", 32, "bold"))
+# title_label.pack(pady=20)
 
 
+# login_button = CTkButton(main_frame,
+#                         font=("Arial",20, "bold"),
+#                         text="Login")
+# login_button.pack(side="left", padx=100, pady=20)
 
-app.mainloop()
+# signup_button = CTkButton(main_frame,
+#                         font=("Arial",20, "bold"),
+#                         text="Sign up")
+# signup_button.pack(side="left", padx=10, pady=20)
+
+# # input
+# input_frame = CTkFrame(main_frame)
+# input_frame.pack(pady=10, padx=20, fill="both")
+
+# username_input = CTkEntry(input_frame,
+#                           width=350,
+#                           height=50)
+# username_input.pack(pady=10)
+
+# password_input = CTkEntry(input_frame, 
+#                           width=350,
+#                           height=50)
+# password_input.pack(pady=10)
+
+
+
+# app.mainloop()
+
+#! -------------------------------------------------------------------------------------
