@@ -290,8 +290,46 @@ def task_submit() :
         print("Task has been added succesfully !")
         task_entry.delete(0, END)
 
-def delete_button_fonction(): 
-    ...
+def delete_button_fonction():
+    global task_count
+    entryNumber_delete_task.pack()
+    num_to_delete_str = entryNumber_delete_task.get()
+
+    if not num_to_delete_str.isdigit():
+        entryNumber_delete_task.delete(0, END)
+        return
+
+    num_to_delete = int(num_to_delete_str)
+
+    all_tasks_text = task_list.get("1.0", "end-1c")
+    task_lines = [line for line in all_tasks_text.splitlines() if line.strip()]
+
+    if not (1 <= num_to_delete <= len(task_lines)):
+        entryNumber_delete_task.delete(0, END)
+        return
+
+    # Remove the task using list index (task number - 1)
+    del task_lines[num_to_delete - 1]
+
+    task_count = len(task_lines)
+
+    task_list.delete("1.0", END)
+
+    new_list_content = []
+    for i, task_line in enumerate(task_lines):
+        # Get the task text after the first '.'
+        try:
+            task_text = task_line.split('.', 1)[1].strip()
+        except IndexError: # If line format is unexpected
+            task_text = task_line.strip()
+        # Add back with new number
+        new_list_content.append(f"{i + 1}. {task_text}")
+
+    # Put the renumbered list back
+    if new_list_content:
+        task_list.insert("1.0", "\n".join(new_list_content) + "\n")
+
+    entryNumber_delete_task.delete(0, END)
 
 
 # Get the directory of the current script
