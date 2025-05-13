@@ -18,7 +18,7 @@
 #
 
 def poserQuestions(pseudo):
-    return repnses  # dictionaire
+    return reponse  # dictionaire
 
 def correction(pseudo):
     return resultat
