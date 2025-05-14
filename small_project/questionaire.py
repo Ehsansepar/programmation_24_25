@@ -35,10 +35,23 @@ def poser_questions(pseudo):
     return {} # Example: return a dictionary of answers
 
 def calculer_correction(pseudo, reponses):
-    """Placeholder for correcting answers."""
+    """Calcule le score en comparant directement les réponses."""
     print(f"Correction pour {pseudo}.")
+    score = 0
+    reponses_correctes = {
+        "Q1": "Paris",
+        "Q2": "7",
+        "Q3": "Vert",
+        "Q4": "Pacifique",
+        "Q5": "4"
+    }
+
+    for cle_question, reponse_utilisateur in reponses.items():
+        if cle_question in reponses_correctes and reponse_utilisateur == reponses_correctes[cle_question]:
+            score += 1
     
-    return 0 # Example: return a score
+    print(f"Le score de {pseudo} est de {score}/{len(reponses_correctes)}")
+    return score
 
 def afficher_resultat(pseudo, resultat):
     """Placeholder for displaying results."""
