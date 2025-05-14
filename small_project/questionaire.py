@@ -4,7 +4,7 @@
 
 
 # key = pseudo
-# repnses = {pseudo : "charles",
+# reponses = {pseudo : "charles",
 #           questionnaire : {Q1 : 1,
 #                            Q2 : 2,
 #                            Q3 : 3,
@@ -18,7 +18,7 @@
 #
 
 def poserQuestions(pseudo):
-    return reponse  # dictionaire
+    return reponses  # dictionaire
 
 def correction(pseudo):
     return resultat
@@ -54,3 +54,4 @@ while continuer:
     # continuer = False
 
 
+    
