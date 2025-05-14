@@ -22,11 +22,9 @@ def poser_questions(pseudo):
     print(f"Questions posées à {pseudo}.")
     reponses = {}
     questions = [
-        "Quelle est la capitale de la France ?",
-        "Combien de jours y a-t-il dans une semaine ?",
-        "Quelle couleur obtient-on en mélangeant le bleu et le jaune ?",
-        "Quel est le plus grand océan du monde ?",
-        "Combien font 2 + 2 ?"
+        "1 - Quelle est la capitale de la France ?",
+        "2 - Combien de jours y a-t-il dans une semaine ?",
+        "4 - Combien font 2 + 2 ?"
     ]
     for i, q_text in enumerate(questions):
         reponse = input(f"Question {i+1}: {q_text} ")
@@ -41,8 +39,6 @@ def calculer_correction(pseudo, reponses):
     reponses_correctes = {
         "Q1": "Paris",
         "Q2": "7",
-        "Q3": "Vert",
-        "Q4": "Pacifique",
         "Q5": "4"
     }
 
