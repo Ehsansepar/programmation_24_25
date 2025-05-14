@@ -17,35 +17,71 @@
 #
 #
 
-def poserQuestions(pseudo):
-    return reponses  # dictionaire
+def poser_questions(pseudo):
+    """Placeholder for asking questions."""
+    print(f"Questions posées à {pseudo}.")
+    reponses = {}
+    questions = [
+        "Quelle est la capitale de la France ?",
+        "Combien de jours y a-t-il dans une semaine ?",
+        "Quelle couleur obtient-on en mélangeant le bleu et le jaune ?",
+        "Quel est le plus grand océan du monde ?",
+        "Combien font 2 + 2 ?"
+    ]
+    for i, q_text in enumerate(questions):
+        reponse = input(f"Question {i+1}: {q_text} ")
+        reponses[f"Q{i+1}"] = reponse
+    return reponses
+    return {} # Example: return a dictionary of answers
 
-def correction(pseudo):
-    return resultat
+def calculer_correction(pseudo, reponses):
+    """Placeholder for correcting answers."""
+    print(f"Correction pour {pseudo}.")
+    
+    return 0 # Example: return a score
 
-
-def afficherResultat(pseudo):
-    return
+def afficher_resultat(pseudo, resultat):
+    """Placeholder for displaying results."""
+    print(f"Résultat pour {pseudo}: {resultat}")
+    # Implement result display logic here
 
 continuer = True
+pseudo_utilisateur = ""
+reponses_utilisateur = {}
+resultat_utilisateur = 0
+
 while continuer:
-    print("-" * 150)
+    print("-" * 50)
+    print("1. Répondre aux questions")
+    print("2. Calculer le résultat")
+    print("3. Afficher le résultat")
+    print("4. Quitter")
+    print("-" * 50)
 
-    print("1. Repondsre aux questions")
-    print("2. calculer le resultat")
-    print("3. statistique d'une question")
-    print("4. quitter")
-    print("-" * 150)
+    try:
+        choix = int(input("Choisissez une option : "))
 
-    choix = int(input("choisissez une option : "))
-    if choix == 1:
-        poserQuestions(pseudo)
-    elif choix == 2:
-        correction(pseudo)
-    elif choix == 3:
-        afficherResultat(pseudo)
-    elif choix == 4:
-        continuer = False
+        if choix == 1:
+            pseudo_utilisateur = input("Entrez votre pseudo : ")
+            reponses_utilisateur = poser_questions(pseudo_utilisateur)
+        elif choix == 2:
+            if not pseudo_utilisateur:
+                print("Veuillez d'abord répondre aux questions (option 1).")
+            else:
+                resultat_utilisateur = calculer_correction(pseudo_utilisateur, reponses_utilisateur)
+                print("Résultat calculé.")
+        elif choix == 3:
+            if not pseudo_utilisateur:
+                print("Veuillez d'abord répondre aux questions (option 1) et calculer le résultat (option 2).")
+            else:
+                afficher_resultat(pseudo_utilisateur, resultat_utilisateur)
+        elif choix == 4:
+            print("Au revoir !")
+            continuer = False
+        else:
+            print("Option invalide. Veuillez choisir un nombre entre 1 et 4.")
+    except ValueError:
+        print("Entrée invalide. Veuillez entrer un nombre.")
 
 
     # pseudo = input("Entrez votre pseudo : ")
