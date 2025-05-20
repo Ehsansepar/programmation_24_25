@@ -1,0 +1,5 @@
+testproject/__pycache__
+testproject/.vscode
+testproject/src/__pycache__
+testproject/tests/__pycache__
+small_project/__pycache__/
